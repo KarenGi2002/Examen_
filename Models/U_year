@@ -1,0 +1,23 @@
+using System.ComponentModel.DataAnnotations;
+
+namespace universidades.Models;
+
+public class U_year{
+    [Key]
+    public Guid id{get;set;}
+
+  [Required]
+public int year{get;set;}
+ [Required]
+public int num_student{get;set;}
+
+ [Required]
+public int student_staff_ratio{get;set;}
+
+ [Required]
+public int pct{get;set;}
+
+    [Required]
+public int pct_female{get;set;}
+
+}

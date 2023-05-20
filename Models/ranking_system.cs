@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace universidades.Models;
 
-public class Country{
+public class ranking_system{
     [Key]
     public Guid id{get;set;}
 
