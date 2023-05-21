@@ -7,9 +7,8 @@ namespace universidades
     {
         public DbSet<Country>? country {get;set;}
      public DbSet<ranking_system>? ranking_System {get;set;}
- public DbSet<criteria>? criteria {get;set;}
- 
- public DbSet<university>? university {get;set;}
+
+  public DbSet<University>? University {get;set;}
  
         public context(DbContextOptions<context> options) : base(options){}
     }

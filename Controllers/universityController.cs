@@ -11,7 +11,7 @@ namespace universidades.Controllers;
 public class universityController: ControllerBase{
     //inyeccion de dependencia
 
-IuniversityService uniService;
+IUniversityService uniService;
 public universityController(universityService serviceUniversity){
    uniService=serviceUniversity;
 }
@@ -20,7 +20,7 @@ public universityController(universityService serviceUniversity){
  //ATRIBUTOS DE ENDPOINTS
  //CREATE
  [HttpPost]
- public IActionResult ingresar([FromBody] university nuevo){
+ public IActionResult ingresar([FromBody] University nuevo){
 uniService.insertar(nuevo);
     return Ok("Datos guardados");
  }   
@@ -30,7 +30,7 @@ uniService.insertar(nuevo);
     return Ok(uniService.obtener());
  }
  [HttpPut("{id}")]
- public IActionResult actualizar([FromBody] university uActualizar, Guid id){
+ public IActionResult actualizar([FromBody] University uActualizar, Guid id){
 uniService.actualizar(id,uActualizar);
     return Ok("Datos actualizados");
 
